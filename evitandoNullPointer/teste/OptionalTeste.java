@@ -19,7 +19,7 @@ public class OptionalTeste {
         System.out.println ( optional2 );
         System.out.println ( optional3 );
         //buscando valores
-        System.out.println (optional1.get ());
+        System.out.println (optional1.get ());//forma mais basica e é preciso ter certeza que  variavel nao sera nula
         System.out.println (optional1.orElse ( "vazio" ));//ele vai buscar a variavel, se nao tiver nada ele retorna oq tem dentro do orElse
 
     }
