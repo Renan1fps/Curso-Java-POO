@@ -5,8 +5,9 @@ import java.util.Optional;
 public class OptionalTeste {
     public String nome;
 
-    public static void main(String[] args) {
-        OptionalTeste op = new OptionalTeste ();
+    public static void main(String[] args) {//usado para evitar o NullPointerException
+
+        OptionalTeste op = new OptionalTeste ();//a classe option encapsula a minha variavel
 
         Optional < String > optional1 = Optional.of ( "renan" );//a variavel que eu passar no optional.of nao pode ser nula
 
