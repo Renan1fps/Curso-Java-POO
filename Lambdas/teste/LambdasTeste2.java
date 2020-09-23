@@ -11,13 +11,17 @@ import static java.util.Arrays.asList;
 
 public class LambdasTeste2 {
     public static void main(String[] args) {
-        foreach ( asList ( "Renan" , "Oliveira" , "Emerson" ) , (String s) -> System.out.println ( s ) );
+        foreach ( asList ( "Renan" , "Oliveira" , "Emerson" ) , System.out::println );//method refence
+
         List < Integer > integers = map ( asList ( "Renan" , "Oliveira" , "Emerson" ) , (String s) -> s.length () );
         System.out.println ( integers );
+
         List < Carro > carros = asList ( new Carro ( "azul" , 2005 ) , new Carro ( "verde" , 2010 ) , new Carro ( "vermelho" , 2008 ) );
         List < String > coresCarros = real ( carros , (Carro s) -> s.getCor () );
         System.out.println ( coresCarros );
-        List < Integer > ano = map ( carros , (Carro s) -> s.getAno () );
+
+
+        List < Integer > ano = map ( carros , Carro::getAno  );//method referenc
         System.out.println ( ano );
     }
 
